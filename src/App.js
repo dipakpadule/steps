@@ -27,7 +27,7 @@ function App() {
       <button className="close" onClick={() => isOpenSet((is) => !is)}>
         &times;
       </button>
-      <DateCounter />
+
       {isOpen && (
         <div className="steps">
           <div className="numbers">
@@ -54,6 +54,7 @@ function App() {
           </div>
         </div>
       )}
+      <DateCounter />
     </div>
   );
 }
