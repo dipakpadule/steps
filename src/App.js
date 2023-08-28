@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DateCounter from "./DateCounter";
 
 const messages = [
   "Learn React ⚛️",
@@ -21,18 +22,12 @@ function App() {
     } else return;
   }
 
-  // function handleClose() {
-  //   if (isOpen) {
-  //     isOpenSet(false);
-  //   } else {
-  //     isOpenSet(true);
-  //   }
-  // }
   return (
     <div>
-      <button className="close" onClick={() => isOpenSet(!isOpen)}>
+      <button className="close" onClick={() => isOpenSet((is) => !is)}>
         &times;
       </button>
+      <DateCounter />
       {isOpen && (
         <div className="steps">
           <div className="numbers">
